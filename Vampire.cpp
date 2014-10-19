@@ -8,19 +8,19 @@ Vampire::~Vampire() {
     
 }
 
-void Vampire::vampirism(Unit& victim) {
-    addHitPoints(1);
+void Vampire::vampirism() {
+    addHitPoints(damage*0.1);
 }
 
 void Vampire::attack(Unit& enemy) {
-    enemy.takeDamage(damage);
-    vampirism(enemy);
+    enemy.takeDamage(this->damage);
+    vampirism();
     if ( enemy.getHitPoints() != 0 ) {
-        counterAttack(*this);
+        enemy.counterAttack(*this);
     }
 }
 
 void Vampire::counterAttack(Unit& enemy) {
         enemy.takeDamage(damage/2);
-        vampirism(enemy);
+        vampirism();
 }

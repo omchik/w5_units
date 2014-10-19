@@ -2,22 +2,25 @@
 #include "Soldier.h"
 #include "Rogue.h"
 #include "Vampire.h"
+#include "Spellcaster.h"
 
 int main() {
-    Soldier* ali = new Soldier("Soldier", 10, 1);
-    Rogue* bobo = new Rogue("Bobo", 100, 17);
-    Vampire* george = new Vampire("Vampire", 10, 1);
+    Soldier* soldier = new Soldier("Soldier", 100, 16);
+    Rogue* rogue = new Rogue("Rogue", 100, 17);
+    Vampire* vampire = new Vampire("Vampire", 100, 12);
+    Spellcaster* spellcaster = new Spellcaster("Spellcaster", 100, 12, 100);
     
-    std::cout << *ali << std::endl;
-    // std::cout << *bobo << std::endl;
-    std::cout << *george << std::endl;
+    std::cout << *soldier << std::endl;
+    std::cout << *rogue << std::endl;
+    std::cout << *vampire << std::endl;
+    std::cout << *spellcaster << std::endl;
     
-    // bobo->attack(*ali);
-    ali->attack(*george);
+    // rogue->attack(*soldier);
+    // vampire->attack(*soldier);
     
-    std::cout << *ali << std::endl;
-    // std::cout << *bobo << std::endl;
-    std::cout << *george << std::endl;
+    // std::cout << *soldier << std::endl;
+    // std::cout << *rogue << std::endl;
+    // std::cout << *vampire << std::endl;
     
     return 0;
 }

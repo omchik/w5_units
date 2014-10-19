@@ -5,7 +5,7 @@
 
 class Vampire : public Unit {
     private:
-        void vampirism(Unit& victim);
+        void vampirism();
     public:
         Vampire(const std::string& name, int hp, int dmg);
         ~Vampire();

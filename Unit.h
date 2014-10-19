@@ -24,7 +24,7 @@ class Unit {
         void addHitPoints(int hp);
         void takeDamage(int dmg);
 
-        void attack(Unit& enemy);
+        virtual void attack(Unit& enemy);
         void counterAttack(Unit& enemy);
 };
 
