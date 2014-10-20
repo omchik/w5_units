@@ -38,7 +38,7 @@ const std::string& Unit::getName() const {
 void Unit::addHitPoints(int hp) {
     ensureIsAlive();
     
-    if ( hp > hitPointsLimit ) {
+    if ( hitPoints + hp > hitPointsLimit ) {
         hitPoints = hitPointsLimit;
     } else {
         hitPoints += hp;
